@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Paytone+One&family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .fontPacifico {
+    font-family: "Pacifico", cursive;
+  }
+  .fontPoppins {
+    font-family: "Poppins", sans-serif;
+  }
+  .fontPaytone {
+    font-family: "Paytone One", sans-serif;
+  }
+}
