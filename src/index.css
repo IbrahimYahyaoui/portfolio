@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Paytone+One&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Pacifico&family=Paytone+One&family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #141414;
+  }
   .fontPacifico {
     font-family: "Pacifico", cursive;
   }
@@ -13,4 +16,17 @@
   .fontPaytone {
     font-family: "Paytone One", sans-serif;
   }
+  .fontOutfit {
+    font-family: "Outfit", sans-serif;
+  }
+  .h500 {
+    height: 580px;
+  }
+}
+*::selection {
+  background: #fff;
+  color: #cf4c4c;
+}
+.particles-container {
+  max-height: 300px; /* Set your desired maximum height value */
 }

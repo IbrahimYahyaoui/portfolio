@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MoonIcon, Bars3BottomRightIcon } from "@heroicons/react/20/solid";
 import { motion, useAnimation } from "framer-motion";
+import Header from "./Header";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,44 +38,47 @@ const Navbar = () => {
   };
 
   return (
-    <motion.div
-      className="flex items-center bg-myBlack text-creamWhite fixed w-full"
-      variants={containerVariants}
-      animate={isScrolled ? "scrolled" : "notScrolled"}
-    >
-      <motion.p
-        className={`fontPacifico   transition-all text-2xl w-1/2 ${
-          !isScrolled ? "ml-20" : "ml-10"
-        } `}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
+    <>
+      <motion.div
+        className="flex items-center bg-myBlack
+       text-creamWhite fixed w-full mt-5 lg:mt-0 border-b-2 border-white border-opacity-10 z-20"
+        variants={containerVariants}
+        animate={isScrolled ? "scrolled" : "notScrolled"}
       >
-        IB
-      </motion.p>
-      <div
-        className={`flex justify-end    transition-all  w-1/2 ${
-          !isScrolled ? "mr-20" : "mr-10"
-        } `}
-      >
-        <motion.div
-          className="w-6 mr-4 cursor-pointer"
+        <motion.p
+          className={`fontPacifico   transition-all text-2xl w-1/2 ${
+            !isScrolled ? "ml-20" : "ml-10"
+          } `}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
         >
-          <MoonIcon />
-        </motion.div>
-        <motion.div
-          className="w-6 cursor-pointer"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          IB
+        </motion.p>
+        <div
+          className={`flex justify-end    transition-all  w-1/2 ${
+            !isScrolled ? "mr-20" : "mr-10"
+          } `}
         >
-          <Bars3BottomRightIcon />
-        </motion.div>
-      </div>
-    </motion.div>
+          <motion.div
+            className="w-6 mr-4 cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+          >
+            <MoonIcon />
+          </motion.div>
+          <motion.div
+            className="w-6 cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
+          >
+            <Bars3BottomRightIcon />
+          </motion.div>
+        </div>
+      </motion.div>
+    </>
   );
 };
 

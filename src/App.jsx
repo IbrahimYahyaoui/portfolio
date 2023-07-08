@@ -1,10 +1,15 @@
+import About from "./components/About";
+import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <Navbar />
-      <p className=" text-center h-screen mb-96 ">test</p>
+
+      <Header />
+
+      <About />
     </>
   );
 }
