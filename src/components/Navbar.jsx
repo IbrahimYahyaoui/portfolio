@@ -41,7 +41,7 @@ const Navbar = () => {
     <>
       <motion.div
         className="flex items-center bg-myBlack
-       text-creamWhite fixed w-full mt-5 lg:mt-0 border-b-2 border-white border-opacity-10 z-20"
+       text-creamWhite fixed w-full  lg:mt-0 border-b-2 border-white border-opacity-10 z-20"
         variants={containerVariants}
         animate={isScrolled ? "scrolled" : "notScrolled"}
       >

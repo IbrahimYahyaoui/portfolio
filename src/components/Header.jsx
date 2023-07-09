@@ -26,6 +26,7 @@ const Header = () => {
       color: "#141414",
     },
     fpsLimit: 165,
+    fullScreen: false,
     particles: {
       shape: {
         type: "image",
@@ -117,16 +118,17 @@ const Header = () => {
     },
   };
   return (
-    <div className="header h500 border-2 border-yellow-400 flex justify-center items-center relative">
+    <div className="header h500 flex justify-center items-center relative">
       <Particles
         id="tsparticles"
         init={loadFull}
         loaded={particlesLoaded}
         options={particleOptions}
+        className=" w-full h-full "
       />
 
-      <main className="text-creamWhite text-center z-10">
-        <h3 className="fontOutfit font-semibold lg:text-3xl text-xl">
+      <main className="text-creamWhite text-center z-10 absolute">
+        <h3 className="fontOutfit font-semibold lg:text-2xl text-xl">
           Ibrahim Yahyaoui
         </h3>
         <h1 className="fontPaytone text-4xl lg:text-7xl">web developer</h1>

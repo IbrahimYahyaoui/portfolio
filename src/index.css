@@ -27,6 +27,6 @@
   background: #fff;
   color: #cf4c4c;
 }
-.particles-container {
-  max-height: 300px; /* Set your desired maximum height value */
-}
+/* #tsparticles {
+  height: 100px;
+} */
