@@ -1,14 +1,11 @@
 import React from "react";
-import { MinusIcon } from "@heroicons/react/20/solid";
 import myPic from "../assets/me.png";
+import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
     <div className=" bg-white pt-5 flex  items-center flex-col">
-      <div className="flex flex-col w-10 items-center">
-        <h1 className="text-2xl text-center fontOutfit">About</h1>
-        <MinusIcon className="w-4  " />
-      </div>
+      <SectionTitle name="About" />
       <div className="p-4 flex items-center flex-col">
         <p className=" lg:w-1/2 text-center mb-8">
           I'm a web developer and computer science student who specializes in
