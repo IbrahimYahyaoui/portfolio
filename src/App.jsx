@@ -12,13 +12,20 @@ function App() {
 
   useEffect(() => {
     const handleLoad = () => {
-      setIsLoaded(true);
-      document.body.style.overflow = "auto"; // Enable scrolling
+      if (document.readyState === "complete") {
+        setIsLoaded(true);
+        document.body.style.overflow = "auto"; // Enable scrolling
+      }
     };
 
     document.body.style.overflow = "hidden"; // Disable scrolling
 
-    window.addEventListener("load", handleLoad);
+    if (document.readyState === "complete") {
+      setIsLoaded(true);
+      document.body.style.overflow = "auto"; // Enable scrolling
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
     return () => {
       window.removeEventListener("load", handleLoad);
