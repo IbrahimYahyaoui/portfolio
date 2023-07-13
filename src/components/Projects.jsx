@@ -7,21 +7,12 @@ import TG from "../assets/mockup/closetly/TG.jpg";
 import hevipi from "../assets/mockup/closetly/hevipi.jpg";
 
 const Projects = () => {
-  const projectVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
   return (
     <div className="flex flex-col items-center p-4 pb-12 text-white">
       <SectionTitle name="Projects" />
-      {/* project 1 */}
-      <motion.div
-        className="group mx-4 rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3"
-        variants={projectVariants}
-        initial="hidden"
-        animate="visible"
-      >
+
+      {/* project 2 */}
+      <motion.div className="group my-4 rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3">
         <div className="h-90 mt-4 flex flex-col-reverse items-center overflow-hidden rounded-lg p-4 lg:flex-row lg:justify-center">
           <div className="flex h-full flex-col lg:w-2/3">
             <p className="fontOutfit mt-4 text-4xl transition-transform group-hover:scale-105 lg:mt-0">
@@ -49,14 +40,9 @@ const Projects = () => {
           </div>
         </div>
       </motion.div>
-      {/* end project 1 */}
+      {/* end project 2 */}
       {/* project 2 */}
-      <motion.div
-        className="group my-4 rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3"
-        variants={projectVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="group my-4 rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3">
         <div className="h-90 mt-4 flex flex-col-reverse items-center overflow-hidden rounded-lg p-4 lg:flex-row lg:justify-center">
           <div className="flex h-full flex-col lg:w-2/3">
             <p className="fontOutfit mt-4 text-4xl transition-transform group-hover:scale-105 lg:mt-0">
@@ -85,12 +71,7 @@ const Projects = () => {
       </motion.div>
       {/* end project 2 */}
       {/* project 3 */}
-      <motion.div
-        className="group rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3"
-        variants={projectVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="group rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3">
         <div className="h-90 mt-4 flex flex-col-reverse items-center overflow-hidden rounded-lg p-4 lg:flex-row lg:justify-center">
           <div className="flex h-full flex-col lg:w-2/3">
             <p className="fontOutfit mt-4 text-4xl transition-transform group-hover:scale-105 lg:mt-0">

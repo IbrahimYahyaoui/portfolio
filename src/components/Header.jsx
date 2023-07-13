@@ -15,10 +15,11 @@ import { loadFull } from "tsparticles";
 // import vite from "../assets/vite.png";
 
 const Header = () => {
-  const headersRef = useRef();
+  // get width  of the screen to set the number of particles
+  const width = window.innerWidth;
 
   const particlesLoaded = (container) => {
-    // console.log(container);
+    console.log("%cHey , don't look here 🫤", "color: red; font-size: 20px");
   };
 
   const particleOptions = {
@@ -105,7 +106,8 @@ const Header = () => {
           enable: true,
           area: 1200,
         },
-        value: 60,
+
+        value: width < 768 ? 140 : 80,
       },
       opacity: {
         value: 0.8,

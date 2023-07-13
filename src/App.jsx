@@ -27,7 +27,6 @@ function App() {
   useEffect(() => {
     if (isLoaded) {
       document.body.style.overflow = "auto";
-
       setLoader(false);
     }
   }, [isLoaded]);
@@ -37,7 +36,9 @@ function App() {
       {loader && (
         <div>
           <div className="absolute z-50 flex h-full w-full items-center justify-center bg-black text-white">
-            <div className="h-32 w-32 animate-spin rounded-full border-b-2 border-t-2 border-purple-500 text-white"></div>
+            <div className="spinner fontPacifico h-14 w-14 animate-spin border-4 border-purple-800 ">
+              IB
+            </div>
           </div>
         </div>
       )}{" "}
