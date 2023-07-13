@@ -1,5 +1,5 @@
 import React from "react";
-
+import myPic from "../assets/me.jpg";
 import SectionTitle from "./SectionTitle";
 
 const About = () => {
@@ -16,13 +16,7 @@ const About = () => {
           forefront of web development.
         </p>
         <div className="">
-          <img
-            src={
-              "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257825/3D%20ICON/me_mbtcdn.png"
-            }
-            alt="me"
-            className=" w-28"
-          />
+          <img src={myPic} alt="me" className=" w-28" />
         </div>
       </div>
     </div>
