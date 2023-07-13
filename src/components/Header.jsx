@@ -1,24 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import cssIcon from "../assets/css.png";
-import htmlIcon from "../assets/html.png";
-import jsIcon from "../assets/js.png";
-import nodeIcon from "../assets/Nodejs.png";
-import reactIcon from "../assets/react.png";
-import express from "../assets/express.png";
-import figma from "../assets/figma.png";
-import mongo from "../assets/mongo.png";
+// import cssIcon from "../assets/css.png";
+// import htmlIcon from "../assets/html.png";
+// import jsIcon from "../assets/js.png";
+// import nodeIcon from "../assets/Nodejs.png";
+// import reactIcon from "../assets/react.png";
+// import express from "../assets/express.png";
+// import figma from "../assets/figma.png";
+// import mongo from "../assets/mongo.png";
 
-import sass from "../assets/sass.png";
-import tailwind from "../assets/tailwind.png";
-import vite from "../assets/vite.png";
+// import sass from "../assets/sass.png";
+// import tailwind from "../assets/tailwind.png";
+// import vite from "../assets/vite.png";
 
 const Header = () => {
   const headersRef = useRef();
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
 
   const particleOptions = {
@@ -31,17 +31,66 @@ const Header = () => {
       shape: {
         type: "image",
         image: [
-          { src: nodeIcon, width: 32, height: 32 },
-          { src: reactIcon, width: 32, height: 32 },
-          { src: cssIcon, width: 32, height: 32 },
-          { src: htmlIcon, width: 32, height: 32 },
-          { src: jsIcon, width: 32, height: 32 },
-          { src: express, width: 32, height: 32 },
-          { src: figma, width: 32, height: 32 },
-          { src: mongo, width: 32, height: 32 },
-          { src: sass, width: 46, height: 32 },
-          { src: tailwind, width: 32, height: 32 },
-          { src: vite, width: 32, height: 32 },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1688716977/3D%20ICON/Nodejs_vateiw.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1688716978/3D%20ICON/react_vv0dfn.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1688716972/3D%20ICON/css3_spmjus.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1688716978/3D%20ICON/html_iudlt4.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1688716973/3D%20ICON/javascript-logo_dz88k7.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257817/3D%20ICON/mongo_ux8x7r.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257816/3D%20ICON/sass_jfccw3.png",
+            width: 42,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257814/3D%20ICON/Nodejs_ymoopf.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257809/3D%20ICON/figma_hd7fdj.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257809/3D%20ICON/vite_jyfr1g.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257808/3D%20ICON/tailwind_psmt7f.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257808/3D%20ICON/express_b9z1rp.png",
+            width: 32,
+            height: 32,
+          },
         ],
       },
       size: {

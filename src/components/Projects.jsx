@@ -42,7 +42,9 @@ const Projects = () => {
           </div>
           <div className="lg:3/4 flex w-3/4 justify-center">
             <img
-              src={mockup}
+              src={
+                "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689258113/3D%20ICON/mc_jilthu.png"
+              }
               alt="pic1"
               className="rounded-md border-2 bg-white transition-shadow group-hover:rotate-1 group-hover:shadow-[2px_0px_15px_1px_#ffffff] lg:w-3/4"
             />
@@ -76,7 +78,9 @@ const Projects = () => {
           </div>
           <div className="lg:3/4 flex w-3/4 justify-center">
             <img
-              src={TG}
+              src={
+                "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689258132/3D%20ICON/TG_ile0ny.png"
+              }
               alt="pic2"
               className="rounded-md border-2 bg-white transition-shadow group-hover:rotate-1 group-hover:shadow-[2px_0px_15px_1px_#ffffff] lg:w-3/4"
             />
@@ -111,7 +115,9 @@ const Projects = () => {
           </div>
           <div className="lg:3/4 flex w-3/4 justify-center">
             <img
-              src={hevipi}
+              src={
+                "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689258119/3D%20ICON/hevipi_ltxqth.png"
+              }
               alt="hevipi"
               className="rounded-md border-2 bg-white transition-shadow group-hover:rotate-1 group-hover:shadow-[2px_0px_15px_1px_#ffffff] lg:w-3/4"
             />
