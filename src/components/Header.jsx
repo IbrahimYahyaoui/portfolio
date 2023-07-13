@@ -118,21 +118,21 @@ const Header = () => {
     },
   };
   return (
-    <div className="header h500 flex justify-center items-center relative">
+    <div className="header h500 relative flex items-center justify-center">
       <Particles
         id="tsparticles"
         init={loadFull}
         loaded={particlesLoaded}
         options={particleOptions}
-        className=" w-full h-full "
+        className=" h-full w-full "
       />
 
-      <main className="text-creamWhite text-center z-10 absolute">
-        <h3 className="fontOutfit font-semibold lg:text-2xl text-xl">
+      <main className="absolute z-10 text-center text-creamWhite">
+        <h3 className="fontOutfit text-xl font-semibold lg:text-2xl">
           Ibrahim Yahyaoui
         </h3>
         <h1 className="fontPaytone text-4xl lg:text-7xl">web developer</h1>
-        <h2 className="fontOutfit font-semibold lg:text-2xl text-lg mt-1">
+        <h2 className="fontOutfit mt-1 text-lg font-semibold lg:text-2xl">
           Transforming Ideas into Web Realities
         </h2>
       </main>

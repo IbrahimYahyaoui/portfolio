@@ -1,11 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { MoonIcon, Bars3BottomRightIcon } from "@heroicons/react/20/solid";
+import {
+  MoonIcon,
+  Bars3BottomRightIcon,
+  XMarkIcon,
+} from "@heroicons/react/20/solid";
 import { motion, useAnimation } from "framer-motion";
 import Header from "./Header";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const controls = useAnimation();
+  const [isShowing, setIsShowing] = useState(false);
+  const scrollToAbout = () => {
+    const section = document.querySelector("#About");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const scrollToProjects = () => {
+    const section = document.querySelector("#About ");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const scrollToContact = () => {
+    const section = document.querySelector("#Contact");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,24 +47,30 @@ const Navbar = () => {
 
   const containerVariants = {
     scrolled: {
-      height: "4rem",
+      height: "5rem",
     },
     notScrolled: {
-      height: "6rem",
+      height: "7rem",
     },
   };
-
+  //
+  useEffect(() => {
+    if (isShowing) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isShowing]);
   return (
     <>
       <motion.div
-        className="flex items-center bg-myBlack
-       text-creamWhite fixed w-full  lg:mt-0 border-b-2 border-white border-opacity-10 z-20"
+        className="fixed z-20 flex w-full items-center border-b-2 border-white border-opacity-10 bg-myBlack pt-4 text-creamWhite lg:mt-0"
         variants={containerVariants}
         animate={isScrolled ? "scrolled" : "notScrolled"}
       >
         <motion.p
-          className={`fontPacifico   transition-all text-2xl w-1/2 ${
-            !isScrolled ? "ml-20" : "ml-10"
+          className={`fontPacifico w-1/2 text-2xl transition-all ${
+            !isScrolled ? "ml-20 " : "ml-10"
           } `}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -56,26 +79,59 @@ const Navbar = () => {
           IB
         </motion.p>
         <div
-          className={`flex justify-end    transition-all  w-1/2 ${
+          className={`flex w-1/2 justify-end transition-all ${
             !isScrolled ? "mr-20" : "mr-10"
           } `}
         >
-          <motion.div
-            className="w-6 mr-4 cursor-pointer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.4 }}
-          >
-            <MoonIcon />
-          </motion.div>
           <motion.div
             className="w-6 cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.6 }}
+            onClick={() => setIsShowing((isShowing) => !isShowing)}
           >
             <Bars3BottomRightIcon />
           </motion.div>
+        </div>
+      </motion.div>
+      <motion.div
+        className="fixed right-0 z-50 flex h-screen w-full"
+        initial={{ opacity: 0, x: "100%" }}
+        animate={isShowing ? { opacity: 1, x: 0 } : { opacity: 0, x: "100%" }}
+        exit={{ opacity: 0, x: "100%" }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className=" flex w-full flex-col items-end bg-myBlack text-white">
+          <p className="    m-8 " onClick={() => setIsShowing(false)}>
+            <XMarkIcon className="h-8 text-white" />
+          </p>
+          <div
+            className="mt-20 flex h-14 w-full justify-center   text-2xl "
+            onClick={() => {
+              setIsShowing(false);
+              scrollToAbout();
+            }}
+          >
+            <p className="w-3/4 border-b-2 text-center">About</p>
+          </div>
+          <div
+            className="mt-10 flex h-14 w-full justify-center   text-2xl "
+            onClick={() => {
+              setIsShowing(false);
+              scrollToProjects();
+            }}
+          >
+            <p className="w-3/4 border-b-2 text-center">Projects</p>
+          </div>
+          <div
+            className="mt-10 flex h-14 w-full justify-center   text-2xl "
+            onClick={() => {
+              setIsShowing(false);
+              scrollToContact();
+            }}
+          >
+            <p className="w-3/4 border-b-2 text-center">Contact</p>
+          </div>
         </div>
       </motion.div>
     </>

@@ -4,10 +4,10 @@ import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
-    <div className=" bg-white pt-5 flex  items-center flex-col">
+    <div className=" flex flex-col items-center  bg-white pt-5" id="About">
       <SectionTitle name="About" />
-      <div className="p-4 flex items-center flex-col">
-        <p className=" lg:w-1/2 text-center mb-8 fontPoppins">
+      <div className="flex flex-col items-center p-4">
+        <p className=" fontPoppins mb-8 text-center lg:w-1/2">
           I'm a web developer and computer science student who specializes in
           using React to build modern and efficient web applications. With a
           solid foundation in various programming concepts and techniques, React
