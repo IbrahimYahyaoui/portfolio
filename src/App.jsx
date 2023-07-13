@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import { Analytics } from "@vercel/analytics/react";
-
+import loadingLogo from "./assets/IB.png";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -35,8 +35,10 @@ function App() {
   return (
     <>
       {!isLoaded && (
-        <div className="absolute z-50 flex h-screen w-full items-center justify-center bg-black text-white">
-          <div className="spinner fontPacifico animate-spin text-4xl">IB</div>
+        <div className="absolute z-50 h-screen w-full justify-center bg-black text-white lg:flex lg:items-center">
+          <div className="spinner fontPacifico animate-spin text-4xl">
+            <img src={loadingLogo} alt="logo" />
+          </div>
         </div>
       )}
       <div
