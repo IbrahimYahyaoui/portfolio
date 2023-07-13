@@ -21,7 +21,7 @@ function App() {
     <>
       {!isLoaded && (
         <div>
-          <div className="absolute flex h-screen w-screen items-center justify-center bg-black">
+          <div className="absolute z-50 flex h-screen w-screen items-center justify-center bg-black">
             <div className="h-32 w-32 animate-spin rounded-full border-b-2 border-t-2 border-purple-500"></div>
           </div>
         </div>
