@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       {!isLoaded && (
-        <div className="absolute z-50 h-screen w-full justify-center bg-black text-white lg:flex lg:items-center">
+        <div className="absolute z-50 flex h-screen w-full items-center justify-center bg-black text-white">
           <div className="spinner fontPacifico animate-spin text-4xl">
             <img src={loadingLogo} alt="logo" />
           </div>
