@@ -1,19 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-// import cssIcon from "../assets/css.png";
-// import htmlIcon from "../assets/html.png";
-// import jsIcon from "../assets/js.png";
-// import nodeIcon from "../assets/Nodejs.png";
-// import reactIcon from "../assets/react.png";
-// import express from "../assets/express.png";
-// import figma from "../assets/figma.png";
-// import mongo from "../assets/mongo.png";
-
-// import sass from "../assets/sass.png";
-// import tailwind from "../assets/tailwind.png";
-// import vite from "../assets/vite.png";
-
+import scroll from "../assets/scroll.gif";
 const Header = () => {
   // get width  of the screen to set the number of particles
   const width = window.innerWidth;
@@ -89,6 +77,16 @@ const Header = () => {
           },
           {
             src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1689257808/3D%20ICON/express_b9z1rp.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1692449503/nextjs-icon-dark-background_lxlme8.png",
+            width: 32,
+            height: 32,
+          },
+          {
+            src: "https://res.cloudinary.com/dfne6tl5b/image/upload/v1692449504/Typescript_logo_2020.svg_uafr9o.png",
             width: 32,
             height: 32,
           },
@@ -169,7 +167,7 @@ const Header = () => {
     },
   };
   return (
-    <div className="header h500 relative flex items-center justify-center">
+    <div className="header h500 relative flex flex-col items-center justify-center">
       <Particles
         id="tsparticles"
         init={loadFull}
@@ -183,9 +181,9 @@ const Header = () => {
           Ibrahim Yahyaoui
         </h3>
         <h1 className="fontPaytone text-4xl lg:text-7xl">web developer</h1>
-        <h2 className="fontOutfit mt-1 text-lg font-semibold lg:text-2xl">
+        {/* <h2 className="fontOutfit mt-1 text-lg font-semibold lg:text-2xl">
           Transforming Ideas into Web Realities
-        </h2>
+        </h2> */}
       </main>
     </div>
   );

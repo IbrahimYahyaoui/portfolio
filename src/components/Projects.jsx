@@ -15,9 +15,10 @@ const Projects = () => {
       <motion.div className="group my-4 rounded-lg border-4 border-white transition-transform hover:scale-101 lg:w-2/3">
         <div className="h-90 mt-4 flex flex-col-reverse items-center overflow-hidden rounded-lg p-4 lg:flex-row lg:justify-center">
           <div className="flex h-full flex-col lg:w-2/3">
-            <p className="fontOutfit mt-4 text-4xl transition-transform group-hover:scale-105 lg:mt-0">
+            <div className="fontOutfit mt-4 text-4xl transition-transform group-hover:scale-105 lg:mt-0">
               Closetly
-            </p>
+              <p className="mt-1 text-xs"> Tech :MERN Stack </p>
+            </div>
             <p className="fontPoppins pt-4">
               Virtual closet application lets you upload your clothes and mix
               them to make outfits. You can share them with your followers and
